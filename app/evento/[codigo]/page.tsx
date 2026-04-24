@@ -13,15 +13,15 @@ export default function EventoPage({ params }: Props) {
 
   if (!event) {
     return (
-      <main className="min-h-screen bg-[#0d0d0f] flex flex-col items-center justify-center px-4 text-center">
-        <div className="text-5xl mb-4">🔍</div>
-        <h1 className="text-2xl font-bold text-white mb-2">Evento não encontrado</h1>
-        <p className="text-gray-400 mb-6">
-          O código <strong className="text-white">{params.codigo}</strong> não corresponde a nenhum evento.
+      <main className="min-h-screen bg-[#f5f5f7] flex flex-col items-center justify-center px-4 text-center">
+        <div className="text-4xl mb-3">🔍</div>
+        <h1 className="text-xl font-bold text-gray-800 mb-1">Evento não encontrado</h1>
+        <p className="text-gray-400 text-sm mb-6">
+          O código <strong className="text-gray-700">{params.codigo}</strong> não foi encontrado.
         </p>
         <Link
           href="/"
-          className="bg-purple-700 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm"
         >
           ← Tentar outro código
         </Link>
@@ -30,8 +30,8 @@ export default function EventoPage({ params }: Props) {
   }
 
   return (
-    <main className="min-h-screen bg-[#0d0d0f] px-4 py-10">
-      <div className="max-w-2xl mx-auto">
+    <main className="min-h-screen bg-[#f5f5f7] px-4 py-8">
+      <div className="max-w-xl mx-auto">
         <Header
           clientName={event.clientName}
           eventName={event.eventName}
